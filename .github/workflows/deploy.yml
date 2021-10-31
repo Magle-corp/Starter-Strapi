@@ -28,6 +28,6 @@ jobs:
       - name: Build project
         run: NODE_ENV=production yarn build
       - name: Rsync project with server one
-        run: rsync -r --exclude="config/database.js" . ${{ secrets.STAGING_SERVER }}:Starter-Kit
+        run: rsync -r --exclude="config/database.js" . ${{ secrets.STAGING_SERVER }}:Starter-Kit-strapi
       - name: Restart server
         run: ssh ${{ secrets.STAGING_SERVER }} sudo service nginx restart
