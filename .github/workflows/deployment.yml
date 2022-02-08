@@ -2,8 +2,11 @@ name: CI deployment
 
 on:
   push:
+#    Uncomment line 7 and remove line 8 and 9,
+#    for enable this action.
 #    branches: [master]
-    branches: []
+    branches-ignore:
+      - '**'
 
 jobs:
   deploy_project:
